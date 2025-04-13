@@ -25,7 +25,7 @@ const Original = ({ Quit }) => {
       const interval = setInterval(() => {
         setTimer((prev) => {
           if (prev <= 0) {
-            return 0;
+            return;
           }
 
           if (prev === 1) {
@@ -124,7 +124,7 @@ const Original = ({ Quit }) => {
             <div className="flex justify-end">
               <button
                 onClick={handleNextQuestion}
-                // disabled={selectedOptions.length !== 4}
+                disabled={selectedOptions.length !== 4}
                 className={`border ${
                   selectedOptions.length === 4
                     ? "bg-[#7253ea] text-white  hover:bg-[#6142d9] transition"
